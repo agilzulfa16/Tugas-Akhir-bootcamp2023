@@ -1,4 +1,7 @@
 <?php
+//Warning! : Jika error lihat peringatan di baris akhir code ini
+
+
 require 'koneksi.php';
 
 $nama = $_POST['nama_customer'];
@@ -49,6 +52,6 @@ $id_penjualan = mysqli_insert_id($conn);
 $tambah_total_harga = "INSERT INTO total_harga (`id`, `id_penjualan`, `harga`, `total_harga`, `diskon`, `total_bayar`) VALUES ('', '$id_penjualan', '$harga', '$total', '$diskon', '$total_bayar')";
 $result_total_harga = mysqli_query($conn, $tambah_total_harga);
 
-// Redirect ke halaman utama
-header('location: http://localhost/BELAJAR-PHP/tugasbesar/index.php')
+// Redirect ke halaman utama(link url mungkin berbeda beda di setiap device maka harus dibah terlebih dahulu sesuai folder penyimpanan)
+header('location: http://localhost/BELAJAR-PHP/tugasAkhir/tugasKelompok')
 ?>
